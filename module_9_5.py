@@ -25,10 +25,11 @@ class Iterator:
             raise StopIteration
         # Если условия выхода не наступили
         else:
+            temp = self.pointer
             self.pointer += self.step
 
             # Возврат значения
-            return self.pointer
+            return temp
 
 # Пробуем шаг = 0 (должно сработать исключение)
 try:
